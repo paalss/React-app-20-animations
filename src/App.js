@@ -36,9 +36,15 @@ class App extends Component {
         <br />
         <Transition
           in={this.state.showBlock}
-          timeout={300}
+          timeout={300} // tall: for alle steg. objekt med spes props: individuelle timeouts for enter og exit
           mountOnEnter
           unmountOnExit
+          onEnter={() => console.log("enter")}
+          onEntering={() => console.log("entering")}
+          onEntered={() => console.log("entered")}
+          onExit={() => console.log("exit")}
+          onExiting={() => console.log("exiting")}
+          onExited={() => console.log("exited")}
         >
           {(state) => {
             return (
@@ -69,7 +75,7 @@ class App extends Component {
           ></div>
         ) : null} */}
 
-        <Modal show={this.state.modalIsOpen}closed={this.closeModal} />
+        <Modal show={this.state.modalIsOpen} closed={this.closeModal} />
 
         {this.state.modalIsOpen ? <Backdrop show /> : null}
         <button className="Button" onClick={this.showModal}>
