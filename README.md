@@ -1,3 +1,15 @@
+# React app 20 animations
+inkludert transitions
+
+```
+npm install
+npm start
+```
+
+
+_________________
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
