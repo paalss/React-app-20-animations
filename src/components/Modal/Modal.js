@@ -5,6 +5,7 @@ import "./Modal.css";
 
 const modal = (props) => {
   return (
+    // trunk: fade-slice
     <CSSTransition mountOnEnter unmountOnExit in={props.show} timeout={300} classNames="fade-slide">
       {(state) => (
           <div className="Modal">
